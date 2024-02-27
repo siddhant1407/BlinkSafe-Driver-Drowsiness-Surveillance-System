@@ -34,8 +34,8 @@ def web():
 
 def webdet():
     capture = cv2.VideoCapture(0)
-    face_cascade = cv2.CascadeClassifier('model_frontalface.xml')
-    eye_glass = cv2.CascadeClassifier('model_eye_tree_eyeglasses.xml')
+    face_cascade = cv2.CascadeClassifier('lbpcascade_model_frontalface.xml')
+    eye_glass = cv2.CascadeClassifier('haarcascade_model_eye_tree_eyeglasses.xml')
 
     while True:
         ret, frame = capture.read()
@@ -61,7 +61,7 @@ def webdet():
 
 def blink():
     capture = cv2.VideoCapture(0)
-    face_cascade = cv2.CascadeClassifier('model_frontalface.xml')
+    face_cascade = cv2.CascadeClassifier('lbpcascade_model_frontalface.xml')
     eye_cascade = cv2.CascadeClassifier('model_eye.xml')
     blink_cascade = cv2.CascadeClassifier('ModelCustomBlinkCascade.xml')
 
